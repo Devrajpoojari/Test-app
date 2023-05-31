@@ -1,0 +1,30 @@
+<div class="row justify-content-center mt-5 mb-3">
+    <div class="col-7 box-sh">
+        <div class="row justify-content-end">
+            
+            <div class="col text-center border  rounded-0">
+                <h2>List Of Tests</h2>
+                
+
+                <table class="table mt-5">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">Test Name</th>
+                            <th scope="col">Test Duration</th>
+                            <th scope="col">Start Time</th>
+                            <th scope="col">End Time</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let list of listOfTest">
+                            <td>{{list.testTitle}}</td>
+                            <td>{{list.testDuration}}</td>
+                            <td>{{list.startTime}}</td>
+                            <td>{{list.endTime}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
