@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { ContactusComponent } from './contactus/contactus.component';
 import { QuestionComponent } from './question/question.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UpdatetestComponent } from './updatetest/updatetest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     TestComponent,
     AboutUsComponent,
     ContactusComponent,
-    QuestionComponent
+    QuestionComponent,
+    UpdatetestComponent
   ],
   imports: [
     BrowserModule,

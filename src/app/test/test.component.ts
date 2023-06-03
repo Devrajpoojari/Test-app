@@ -15,7 +15,7 @@ export class TestComponent implements OnInit {
   duration:string;
   startTime:string;
   endTime:string;
-  test:Test=new Test("","","","");
+  test:Test=new Test(0,"","","","");
   
   ngOnInit(): void {
   }

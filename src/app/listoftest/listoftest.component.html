@@ -13,14 +13,18 @@
                             <th scope="col">Test Duration</th>
                             <th scope="col">Start Time</th>
                             <th scope="col">End Time</th>
+                            <th scope="col">Actions</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let list of listOfTest">
+                        <tr *ngFor="let list of listOfTest" #ival>
                             <td>{{list.testTitle}}</td>
                             <td>{{list.testDuration}}</td>
                             <td>{{list.startTime}}</td>
                             <td>{{list.endTime}}</td>
+                        <td><button class="btn btn-danger"(click)="deleteitem(list.testId)">Delete</button> <button class="btn ml-2" (click)="updateTest(list.testId)" routerLink="/update">Update</button></td>
+
+
                         </tr>
                     </tbody>
                 </table>

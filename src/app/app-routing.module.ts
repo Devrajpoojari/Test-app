@@ -4,6 +4,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ListoftestComponent } from './listoftest/listoftest.component';
 import { QuestionComponent } from './question/question.component';
 import { TestComponent } from './test/test.component';
+import { UpdatetestComponent } from './updatetest/updatetest.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,9 @@ const routes: Routes = [
   {
     path :'listoftest',component:ListoftestComponent
   },
+  {
+    path:'update',component:UpdatetestComponent
+  }
 
   
 ];
