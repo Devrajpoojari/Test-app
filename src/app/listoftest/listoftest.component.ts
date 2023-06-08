@@ -10,7 +10,7 @@ import { Test } from '../test';
 })
 export class ListoftestComponent implements OnInit {
 
-  constructor(private testService: TestService,private router:Router) { }
+  constructor(private testService: TestService, private router: Router) { }
   listOfTest: Test[];
 
   ngOnInit(): void {
@@ -28,7 +28,11 @@ export class ListoftestComponent implements OnInit {
     })
 
   }
-  updateTest(num:any){
-    localStorage.setItem('id',num);
+  updateTest(num: any) {
+    localStorage.setItem('id', num);
+  }
+  addQuestion(testId: number) {
+    localStorage.setItem('testId', testId+'');
+    console.log(testId)
   }
 }

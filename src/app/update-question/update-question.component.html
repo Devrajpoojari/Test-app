@@ -1,13 +1,13 @@
 <div class="container mt-5">
     <div class="row justify-content-center">
-        <div class="col-7 box-sh">
-            <div class="row justify-content-end">
-                <div class="col text-center border  rounded-0">
-                    <h2>Add Question for test id {{testId}}</h2>
+        <div class="col-8 box-sh">
+            <div class="row justify-content-center">
+                <div class="col text-end border  rounded-0">
+                    <h2>Update Question Id : {{qId}}</h2>
 
-                    <form #que="ngForm">
+                    <form>
                         <div class="form-group row">
-                            <div class="col-sm-10">
+                            <div  class="col-sm-10">
                                 <div>
 
                                     <textarea [value]="name" (input)="onValueChange($event)"
@@ -36,19 +36,28 @@
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-10">
-                                <input type="number" class="form-control" name="question.chosenAnswer" placeholder="Answer"
+                                <label class="col-sm-5 col-form-label">Answer :</label>
+                                <input type="number" class="form-control" name="question.questionAnswer" placeholder="Answer"
                                 [(ngModel)]="question.questionAnswer"  required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-sm-10">
+                                <label class="col-sm-5 col-form-label">Choose Answer </label>
+                                <input type="number" class="form-control" name="question.chosenAnswer" placeholder="Answer"
+                                [(ngModel)]="question.chosenAnswer"  required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <label class="col-sm-2 col-form-label">Marks</label>
                                 <input type="number" class="form-control" name="question.questionMarks"
-                                    placeholder="Total Question Marks" [(ngModel)]="question.questionMarks" required>
+                                    placeholder="Total Question Marks" [(ngModel)]="question.questionMarks"  required>
                             </div>
                         </div>
                         <div class="form-group row1">
                             <div class="col-sm-9">
-                                <button type="submit" class="btn btn-info" (click)="submit()" [disabled]="que.invalid">Add
+                                <button type="submit" class="btn btn-info" (click)="updateQuestion()">Update
                                     Question</button>
                             </div>
                             <div>

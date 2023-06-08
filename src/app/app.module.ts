@@ -15,6 +15,8 @@ import { ContactusComponent } from './contactus/contactus.component';
 import { QuestionComponent } from './question/question.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UpdatetestComponent } from './updatetest/updatetest.component';
+import { ListofQuestionsComponent } from './listof-questions/listof-questions.component';
+import { UpdateQuestionComponent } from './update-question/update-question.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +26,9 @@ import { UpdatetestComponent } from './updatetest/updatetest.component';
     AboutUsComponent,
     ContactusComponent,
     QuestionComponent,
-    UpdatetestComponent
+    UpdatetestComponent,
+    ListofQuestionsComponent,
+    UpdateQuestionComponent
   ],
   imports: [
     BrowserModule,

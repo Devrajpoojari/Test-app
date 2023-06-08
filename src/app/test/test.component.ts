@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { TestService } from '../Service/test.service';
 import { Test } from '../test';
 
@@ -20,7 +21,7 @@ export class TestComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(){
+  submit(testForm:NgForm){
     this.test.testTitle=this.name;
     this.test.testDuration=this.duration;
     this.test.startTime=this.startTime;
@@ -30,6 +31,7 @@ export class TestComponent implements OnInit {
       if(data!=null)
       {
         alert("Test Added Successfully");
+        testForm.reset();
       }
     })
   }

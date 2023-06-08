@@ -5,12 +5,15 @@
                 <div class="col text-center border  rounded-0">
                     <h2>Add Test</h2>
 
-                    <form>
+                    <form #testForm="ngForm">
                         <div class="form-group row">
                             <label for="inputEmail3" class="col-sm-2 col-form-label">Enter Test Name</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" placeholder="Test Name" name="name"
-                                    [(ngModel)]="name" required>
+                                    [(ngModel)]="name" required #name1="ngModel">
+                                    <div  *ngIf="name1.invalid && name1.dirty" style="color: red;">
+                                        Test Name shouldn't be Blank 
+                                    </div>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -23,22 +26,22 @@
                             <label for="inputPassword3" class="col-sm-2 col-form-label">Enter Start Time</label>
                             <div class="col-sm-10">
                                 <input type="datetime-local" class="form-control" name="startTime"
-                                    [(ngModel)]="startTime">
+                                    [(ngModel)]="startTime" required>
                             </div>
                         </div>
                         <div class="form-group row">
                             <label for="inputPassword3" class="col-sm-2 col-form-label">Enter End Time</label>
                             <div class="col-sm-10">
-                                <input type="datetime-local" class="form-control" name="endTime" [(ngModel)]="endTime">
+                                <input type="datetime-local" class="form-control" name="endTime" [(ngModel)]="endTime" required>
                             </div>
                         </div>
                         <div class="form-group row1">
                             <div class="col-sm-9">
-                                <button type="submit" class="btn btn-info" (click)="submit()">Add
+                                <button type="submit" class="btn btn-info" (click)="submit(testForm)" [disabled] ="testForm.invalid">Add
                                     Test</button>
                             </div>
                             <div>
-                                <button type="submit" class="btn btn-info" routerLink="/listoftest">List Of
+                                <button type="submit" class="btn btn-info" routerLink="/listoftest" >List Of
                                     Test</button>
                             </div>
                         </div>
