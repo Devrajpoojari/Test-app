@@ -22,9 +22,10 @@
                             <td>{{list.questionId}}</td>
                             <td>{{list.quesionTitle}}</td>
                             <td>{{list.questionMarks}}</td>
-
                             <td>{{list.questionAnswer}}</td>
-                        <td> <button class="btn ml-2" (click)="updateTest(list.questionId)" routerLink="/updateq">Update</button></td>
+                        <td> <button class="btn ml-2" (click)="updateTest(list.questionId)" routerLink="/updateq">Update</button>
+                            <button class="btn btn-danger ml-2" (click)="deleteQuestion(list.questionId)">Delete</button>
+                        </td>
                         </tr>
                     </tbody>
                 </table>

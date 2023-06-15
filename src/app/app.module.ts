@@ -17,6 +17,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { UpdatetestComponent } from './updatetest/updatetest.component';
 import { ListofQuestionsComponent } from './listof-questions/listof-questions.component';
 import { UpdateQuestionComponent } from './update-question/update-question.component';
+import { RegisterComponent } from './register/register.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
+import {MatSelectModule} from '@angular/material/select';
+import { LoginComponent } from './login/login.component';
+import { ListOfUserComponent } from './list-of-user/list-of-user.component';
+import { AssigntestComponent } from './assigntest/assigntest.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,7 +34,12 @@ import { UpdateQuestionComponent } from './update-question/update-question.compo
     QuestionComponent,
     UpdatetestComponent,
     ListofQuestionsComponent,
-    UpdateQuestionComponent
+    UpdateQuestionComponent,
+    RegisterComponent,
+    UpdateUserComponent,
+    LoginComponent,
+    ListOfUserComponent,
+    AssigntestComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +47,8 @@ import { UpdateQuestionComponent } from './update-question/update-question.compo
     MatDialogModule,
     BrowserAnimationsModule, FormsModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSelectModule
     
   ],
   providers: [],

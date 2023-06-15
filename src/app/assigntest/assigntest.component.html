@@ -1,0 +1,38 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-7 box-sh">
+            <div class="row justify-content-end">
+                <div class="col text-center border  rounded-0">
+                    <h2>Assign Test for User :{{tUId}} </h2>
+
+                    <form  #que="ngForm">
+                       
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" 
+                                    placeholder="Test Id" name="testId" [(ngModel)]="testId" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-10">
+                                <input type="number" class="form-control" name="tUId"
+                                    placeholder="User Id" [(ngModel)]="tUId" required>
+                            </div>
+                        </div>
+                        <div class="form-group row1">
+                            <div class="col-sm-6">
+                                <button type="submit" class="btn btn-info" (click)="assign()"
+                                    [disabled]="que.invalid">Assign
+                                    Test</button>
+                            </div>
+                            <div>
+                                <button type="submit" class="btn btn-info" routerLink="/listofusers">List Of
+                                    Users</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

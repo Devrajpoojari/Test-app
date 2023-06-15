@@ -22,7 +22,10 @@ export class QuestionService {
   updateQuestion(testId: any, qId: any, question: Question) {
     return this.http.put(this.url + 'update/' + testId + "/" + qId, question, { responseType: 'text' });
   }
-  getById(id:any):Observable<Question>{
-    return this.http.get<Question>(this.url + 'get/' + id,{responseType:'json'});
+  getById(id: any): Observable<Question> {
+    return this.http.get<Question>(this.url + 'get/' + id, { responseType: 'json' });
+  }
+  deleteTest(id: any) {
+    return this.http.delete(this.url + "delete/" + id);
   }
 }
